@@ -1,123 +1,65 @@
-# Ultra Bootscreen Manager 1.1.1
+# Ultra Bootscreen Manager
 
-Switch homebrew для смены заставки UltraNX. Русский и английский интерфейс,
-предпросмотр заставок и бэкапов, восстановление и предложение перезагрузиться.
-Встроены 15a-five-hero-lineup, 17e-flat-split-duel и 04a-hunter-spirit-sumie.
+Меняй заставку UltraNX прямо на Nintendo Switch: выбирай готовый BMP, смотри предпросмотр и возвращай предыдущую заставку из бэкапа.
 
-[Скачать релиз 1.1.1](https://github.com/jeronimo701/ultra-bootscreen-manager/releases/tag/v1.1.1).
-Автор приложения: Jeronimo701. Это самостоятельный homebrew-проект,
-не официальный продукт Nintendo или UltraNX.
+**Nintendo Switch homebrew · версия 1.1.1 · RU / EN**
 
-## Скриншоты
+[Скачать NRO 1.1.1](https://github.com/jeronimo701/ultra-bootscreen-manager/releases/tag/v1.1.1) · [Инструкция и управление](DETAILS.ru.md) · [Редактор для Windows](https://github.com/jeronimo701/ultra-bootscreen-editor) · [Проблемы](https://github.com/jeronimo701/ultra-bootscreen-manager/issues)
 
-Снимки реального рендера интерфейса в тестовом окружении на ПК, 1280×720.
-Это не фотографии и не захват с физической Switch. Сервисы консоли в тестах имитируются.
+![Меню выбора заставки](docs/screenshots/menu-ru.png)
 
-![Меню на русском](docs/screenshots/menu-ru.png)
-![Бэкапы и встроенный оригинал](docs/screenshots/backups-ru.png)
-![Встроенная инструкция](docs/screenshots/help-ru.png)
-![Подтверждение перезагрузки](docs/screenshots/reboot-ru.png)
+*Реальный рендер интерфейса в тестовом окружении на ПК, 1280×720. Это не захват с физической Switch; сервисы консоли имитируются.*
 
-[Меню на английском](docs/screenshots/menu-en.png).
+## Возможности
 
-## Установка на SD
+- Свои заставки и три встроенные картинки.
+- Полноэкранный предпросмотр перед установкой.
+- Первая резервная копия, отдельные бэкапы перед заменой и восстановление.
+- Встроенный оригинал заставки UltraNX.
+- Переключение RU/EN и перезагрузка только после подтверждения.
 
-Скачай `UltraBootscreenManager.nro` из Releases. На SD создай папку
-`switch/UltraBootscreenManager` и положи NRO в неё. Если используешь готовую
-папку релиза, скопируй её папку `switch` в корень SD. Структура:
+## Установка
 
-```
+1. Скопируй `UltraBootscreenManager.nro` из [релиза](https://github.com/jeronimo701/ultra-bootscreen-manager/releases/tag/v1.1.1) в `switch/UltraBootscreenManager/` на SD.
+2. Свои BMP положи в подпапку `bootscreens/`.
+3. Запусти приложение через hbmenu. Выбери заставку, нажми **X** для предпросмотра, **A** для установки с подтверждением.
+
+```text
 switch/UltraBootscreenManager/
-    UltraBootscreenManager.nro
-    bootscreens/                  <- свои заставки BMP
-    backups/                      <- создаётся автоматически
-    language.txt                  <- создаётся при смене языка
+├── UltraBootscreenManager.nro
+├── bootscreens/       свои BMP
+└── backups/           создаётся автоматически
 ```
 
-Запусти приложение через hbmenu. Для трёх встроенных заставок отдельные
-картинки не нужны. Свои картинки подготовь в Ultra Bootscreen Editor:
-BMP 720×1280, 32 bit, без сжатия, с поворотом под UltraNX.
-Обычные JPG/PNG непосредственно в NRO не конвертируются.
-В bootscreens можно класть BMP с любыми именами, без переименования в bootscreen.bmp.
-Вложенные папки не сканируются; предел списка — 512 записей.
-Для имён файлов рекомендуются латиница, цифры или кириллица.
+Картинки нужны в формате UltraNX: BMP 720×1280, 32 bit, без сжатия, с нужным поворотом. Обычный JPG/PNG сначала подготовь в [Ultra Bootscreen Editor](https://github.com/jeronimo701/ultra-bootscreen-editor).
 
 ## Управление
 
-- Y: переключить RU/EN; выбор сохраняется.
-- L/R: разделы «Заставки», «Бэкапы», «Инструкция».
-- Вверх/вниз: выбор; ZL/ZR: переход на 10 записей.
-- X: полноэкранный просмотр выбранной заставки или бэкапа.
-- B/X/+ при просмотре: вернуться в меню.
-- A: установить заставку или восстановить выбранный бэкап; ещё раз A — подтвердить.
-- После успешной установки/восстановления: A — перезагрузиться, B — остаться.
-- B: отменить подтверждение; из других разделов вернуться к заставкам.
-- + в меню: выход в hbmenu.
+| Кнопка | Действие |
+| --- | --- |
+| L / R | Заставки / Бэкапы / Инструкция |
+| Вверх / вниз | Выбор |
+| X | Предпросмотр |
+| A | Установить / восстановить, затем подтвердить |
+| B | Отмена / назад |
+| Y | Русский / English |
+| + | Выход в hbmenu |
 
-Инструкция доступна и внутри приложения. Перезагрузка выполняется только
-после отдельного подтверждения. Если сервис перезагрузки недоступен,
-появится сообщение: перезагрузи консоль вручную.
+<details>
+<summary>Бэкапы и встроенная справка — ещё скриншоты</summary>
 
-## Бэкапы и безопасность
+![Бэкапы](docs/screenshots/backups-ru.png)
 
-Приложение меняет только `sdmc:/bootloader/res/bootscreen.bmp`.
-Бэкапы: `sdmc:/switch/UltraBootscreenManager/backups/`.
-Первым в разделе «Бэкапы» стоит «Оригинальная заставка UltraNX [встроено]»:
-точная копия предоставленного bootscreen.bmp, доступная даже без бэкапов на SD.
-X — посмотреть, A — восстановить с подтверждением. Текущая заставка сначала
-сохраняется в бэкап; после восстановления предлагается перезагрузка.
-`original.bmp` — автоматический бэкап первой заставки с SD, он не перезаписывается.
-Это отдельный файл, он не подменяется встроенным оригиналом UltraNX.
-Перед каждой заменой, включая восстановление, создаётся отдельный
-`previous-ДАТА-ВРЕМЯ-НОМЕР.bmp`. Остальные бэкапы сортируются от новых к старым.
+![Инструкция](docs/screenshots/help-ru.png)
 
-Запись проверяется сравнением содержимого. При обычной ошибке установки
-выполняется откат. После прерывания rollback-файл восстанавливается, если
-основной отсутствует. Если оба файла существуют, запись блокируется:
-сначала сохрани их и папку backups на ПК и проверь SD.
-Отключение питания и повреждение FAT не позволяют гарантировать восстановление.
-Бэкапы на SD не заменяют копию на ПК. Не вынимай SD и не выключай консоль при записи.
+</details>
 
-## Проверка и сборка
+## Перед использованием
 
-NRO собран для AArch64 с `-Wall -Wextra -Werror`. Проверены структура NRO,
-RomFS и контрольные суммы четырёх BMP и шрифта. 22 проверки на ПК прошли:
-установка, восстановление, ошибки записи, recovery, списки, язык и кнопки.
-Сервисы Switch в этих тестах имитируются. На реальной Switch версия ещё не проверена.
+Приложение меняет `sdmc:/bootloader/res/bootscreen.bmp`. Сохрани копию SD на ПК, не выключай консоль и не вынимай карту при записи. Бэкап на той же SD не защищает от повреждения карты.
 
-PowerShell: `./build.ps1 -Toolchain 'C:/devkitPro'` (либо задай переменную
-`DEVKITPRO`; без неё путь по умолчанию — `C:/devkitPro`).
-Нужен Windows PowerShell с System.Drawing для генерации кириллического шрифта.
-Использованы devkitA64 GCC 16.1.0, libnx 4.12.0, switch-tools 1.13.1.
-Результат: `UltraBootscreenManager.nro`.
+NRO собран; 22 проверки на ПК описаны в [VALIDATION.md](VALIDATION.md). На физической Switch версия отдельно не проверена. Формат файлов, восстановление после ошибок, сборка и English quick start — в [DETAILS.ru.md](DETAILS.ru.md).
 
-Тесты на Windows: `./test.ps1 -Zig 'C:/tools/zig/zig.exe'`.
-Тесты пишут только в локальную папку `verification`, а не на настоящую SD;
-они также генерируют BMP-снимки интерфейса.
+## Авторство и условия
 
-Повторная сборка при подготовке публичного релиза побайтово совпала с исходным
-NRO версии 1.1.1. 22 проверки на ПК прошли повторно. См. [VALIDATION.md](VALIDATION.md).
-
-## Авторство и сторонние компоненты
-
-Собственный код в текущей редакции предоставляется физическим лицам только
-для бесплатного личного некоммерческого использования. Использование организациями,
-продажа, платное распространение и платные услуги с этим кодом требуют отдельного
-письменного разрешения автора. Бесплатные личные доработки и передача разрешены
-с сохранением условий. Полный текст: [LICENSE.txt](LICENSE.txt), точная область:
-[LICENSE-SCOPE.md](LICENSE-SCOPE.md). Это source-available, не MIT/GPL и не OSI open source.
-Условия не заменяют лицензии libnx, других зависимостей и изображений:
-[THIRD-PARTY.md](THIRD-PARTY.md). Старый релиз не переписывался.
-
-## English quick start
-
-Download the NRO from Releases, place it in `/switch/UltraBootscreenManager/`
-on the SD card and launch via hbmenu. Press Y for English.
-Put compatible 720×1280 uncompressed 32-bit BMPs in
-`/switch/UltraBootscreenManager/bootscreens/` next to the NRO.
-Use Ultra Bootscreen Editor on PC to convert JPG/PNG and apply the required rotation.
-L/R switches Bootscreens / Backups / Help; X previews, A installs/restores
-with confirmation. After success, A reboots and B stays. + exits.
-The Backups tab includes the embedded original UltraNX bootscreen (available
-without SD backups). The automatic first SD backup and dated backups remain separate.
-Back up the SD on PC; hardware testing is still required.
+Автор — **Jeronimo701**. [LICENSE.txt](LICENSE.txt) и [LICENSE-SCOPE.md](LICENSE-SCOPE.md): бесплатное личное некоммерческое использование физическими лицами; организациям и для продажи нужно отдельное разрешение. Сторонние компоненты и изображения: [THIRD-PARTY.md](THIRD-PARTY.md). Не официальный продукт Nintendo или UltraNX.
